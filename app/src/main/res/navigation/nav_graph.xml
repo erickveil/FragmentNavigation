@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/pinkFragment"
+    android:id="@+id/nav_graph.xml">
+
+    <fragment
+        android:id="@+id/pinkFragment"
+        android:name="net.erickveil.fragmentnavigation.view.fragments.Pink"
+        android:label="fragment_pink"
+        tools:layout="@layout/fragment_pink" >
+        <action
+            android:id="@+id/action_pinkFragment_to_greenFragment"
+            app:destination="@id/greenFragment" />
+        <action
+            android:id="@+id/action_pinkFragment_to_blueFragment"
+            app:destination="@id/blueFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/greenFragment"
+        android:name="net.erickveil.fragmentnavigation.view.fragments.Green"
+        android:label="fragment_green"
+        tools:layout="@layout/fragment_green" >
+        <action
+            android:id="@+id/action_greenFragment_to_pinkFragment"
+            app:destination="@id/pinkFragment" />
+        <action
+            android:id="@+id/action_greenFragment_to_blueFragment"
+            app:destination="@id/blueFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/blueFragment"
+        android:name="net.erickveil.fragmentnavigation.view.fragments.Blue"
+        android:label="fragment_blue"
+        tools:layout="@layout/fragment_blue" >
+        <action
+            android:id="@+id/action_blueFragment_to_pinkFragment"
+            app:destination="@id/pinkFragment" />
+        <action
+            android:id="@+id/action_blueFragment_to_greenFragment"
+            app:destination="@id/greenFragment" />
+    </fragment>
+
+
+</navigation>
